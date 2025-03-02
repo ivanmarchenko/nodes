@@ -80,8 +80,7 @@ download_node() {
   '
 
   while true; do
-    # aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf 2>&1 | tee $HOME/hyperspacemodel_download.log
-    aios-cli models add hf:Qwen/qwen2-0_5b-instruct-q4_k_m.gguf 2>&1 | tee $HOME/hyperspacemodel_download.log
+    aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf 2>&1 | tee $HOME/hyperspacemodel_download.log
 
     if grep -q "Download complete" $HOME/hyperspacemodel_download.log; then
         echo "Модель была установлен."
